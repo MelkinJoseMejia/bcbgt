@@ -9,8 +9,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin()
 @RestController
-@RequestMapping("/v1/clientes")
+@RequestMapping(value = "/v1/clientes", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class ClienteController {
 
     @Autowired
